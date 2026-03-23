@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.backends.legacy:build"
+
+[project]
+name = "memory-generator-tsmc12nm"
+version = "0.1.0"
+description = "TSMC 12nm Memory Compiler wrapper & automatic UHDL RTL wrapper generator"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "Proprietary" }
+authors = [
+    { name = "zouzhili" },
+]
+
+[project.scripts]
+memgen = "memgen.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["memgen*"]
